@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+
+<table style="width: 350px;" text-align: center>
+    <tbody>
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>BurnerZone</th>
+            <th>Burner 1</th>
+            <th>Burner 2</th>
+            <th>Burner 3</th>
+            <th>Burner 4</th>
+            <th>Burner 5</th>
+            <th>Burner 6</th>
+            <th>Burner 7</th>
+            <th>Burner 8</th>
+            <th>Burner 9</th>
+            <th>Burner 10</th>
+            <th>Burner 11</th>
+            <th>Burner 12</th>
+            <th>User</th> 
+        </tr>
+        {% for i in detailget %}
+        <tr>
+            <td>{{ i.date_created }}</td>
+            <td><center>{{ i.time }}</center></td>
+            <td><center>{{ i.burnerzone }}</center></td>   
+            <td>{{ i.burner_1 }}</td>    
+            <td>{{ i.burner_2 }}</td>    
+            <td>{{ i.burner_3 }}</td>    
+            <td>{{ i.burner_4 }}</td>    
+            <td>{{ i.burner_5 }}</td>    
+            <td>{{ i.burner_6 }}</td>    
+            <td>{{ i.burner_7 }}</td>    
+            <td>{{ i.burner_8 }}</td>    
+            <td>{{ i.burner_9 }}</td>    
+            <td>{{ i.burner_10 }}</td>    
+            <td>{{ i.burner_11 }}</td>    
+            <td>{{ i.burner_12 }}</td>
+            <td>{{ i.user }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+{% endblock %}

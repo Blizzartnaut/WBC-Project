@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method='POST'> {% csrf_token %}
+{{form.as_p}}
+<!-- <table style="width: 80px;">
+    <tbody>
+    <tr>
+        <td>BurnerZone:</td>
+        <td><input type='integer' name='BurnerZone' placeholder='What burnerzone?' /></td>
+    </tr>
+    <tr>   
+        <td>Burner 1:</td>
+        <td><input type='integer' name='Burner_1' placeholder='Temperature?' /></td>
+    </tr>
+    <tr>    
+        <td>Burner 2: </td>
+        <td><input type='integer' name='Burner_2' placeholder='Temperature?' /></td>
+    </tr>    
+    <tr>
+        <td>Burner 3:  </td> 
+        <td><input type='integer' name='Burner_3' placeholder='Temperature?' /></td>
+    </tr>
+    <tr>    
+        <td>Burner 4: </td>
+        <td><input type='integer' name='Burner_4' placeholder='Temperature?' /></td>
+    </tr>
+    <tr>    
+        <td>Burner 5: </td>
+        <td><input type='integer' name='Burner_5' placeholder='Temperature?' /></td>
+    </tr>
+    <tr>    
+        <td>Burner 6:</td>
+        <td><input type='integer' name='Burner_6' placeholder='Temperature?' /></td>
+    </tr>
+    <tr>    
+        <td>Burner 7: </td>
+        <td><input type='integer' name='Burner_7' placeholder='Temperature?' /></td>
+    </tr>
+    <tr>    
+        <td>Burner 8: </td>
+        <td><input type='integer' name='Burner_8' placeholder='Temperature?' /></td>
+    </tr>
+    <tr>    
+        <td>Burner 9: </td>
+        <td><input type='integer' name='Burner_9' placeholder='Temperature?' /></td>
+    </tr>
+    <tr>    
+        <td>Burner 10: </td>
+        <td><input type='integer' name='Burner_10' placeholder='Temperature?' /></td>
+    </tr>
+    <tr>    
+        <td>Burner 11: </td>
+        <td><input type='integer' name='Burner_11' placeholder='Temperature?' /></td>
+    </tr>
+    <tr>    
+        <td>Burner 12:</td> 
+        <td><input type='integer' name='Burner_12' placeholder='Temperature?' /></td>
+    </tr>
+    <tr>    
+        <td><input type='submit' value='Save' /></td>
+    </tr>
+    </tbody>
+</table> -->
+<button type="submit", name="save">Save</button>
+</form>
+{% endblock %}
