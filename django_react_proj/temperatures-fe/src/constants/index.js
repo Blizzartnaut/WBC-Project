@@ -1,0 +1,1 @@
+export const API_URL = "http://192.168.244.33:8000/api/temperatures/";
