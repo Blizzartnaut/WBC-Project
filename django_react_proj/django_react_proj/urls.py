@@ -13,11 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from urllib import request
 from django.contrib import admin
 from django.urls import path, re_path, include
 from temperatures import views
 from django.conf.urls import url
-from temperatures.views import temperatures_detail, TemperatureList, temperatures_list
+from temperatures import views
+#from temperatures.views import temperatures_list ,TemperatureList
 #from temperatures.views import DynamicSearchFilter
 #from temperatures.views import TemperatureDayArchiveView
 
@@ -26,8 +28,9 @@ from temperatures.views import temperatures_detail, TemperatureList, temperature
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('temperatures.urls')),
+    # re_path(r'^api/temperatures/$', views.temperatures_list())
     #re_path(r'^api/temperatures/$', views.temperatures_list),
     #re_path(r'^api/temperatures/', views.temperatures_search, name='temperatures_search'), #([0-9-]*)
     #path('api/temperatures/?temperatures=<str:date>', views.temperature_get),
-    re_path(r'^api/temperatures/([0-9])$', views.temperatures_detail),
+    # re_path(r'^api/temperatures/([0-9])$', views.temperatures_detail),
 ]
